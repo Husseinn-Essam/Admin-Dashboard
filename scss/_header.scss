@@ -1,7 +1,6 @@
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //grid-template-columns: repeat(auto-fill(minmax(200px, 1fr)));
     grid-template-rows: 1fr 1fr;
     padding-left: 10px;
 }
@@ -26,7 +25,7 @@
     }
     img {
         height: 2rem;
-        width: 2rem;
+        max-width: 2rem;
         @include blueFilter;
     }
 }
@@ -48,7 +47,7 @@
     .pic {
         img {
             height: 3rem;
-            width: 3rem;
+            max-width: 3rem;
             border-radius: 50%;
         }
     }

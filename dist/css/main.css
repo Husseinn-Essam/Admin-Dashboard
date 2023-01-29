@@ -27,7 +27,7 @@
 }
 .search img {
   height: 2rem;
-  width: 2rem;
+  max-width: 2rem;
   filter: invert(59%) sepia(90%) saturate(7465%) hue-rotate(183deg) brightness(101%) contrast(105%);
 }
 
@@ -48,7 +48,7 @@
 }
 .profile .pic img {
   height: 3rem;
-  width: 3rem;
+  max-width: 3rem;
   border-radius: 50%;
 }
 
@@ -136,6 +136,26 @@
   filter: invert(59%) sepia(90%) saturate(7465%) hue-rotate(183deg) brightness(101%) contrast(105%);
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: max-content;
+  padding: 20px;
+  gap: 20px;
+}
+.projects .project {
+  background-color: #f8fafc;
+  padding: 10px;
+}
+.projects .project img {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -145,8 +165,8 @@
 
 main {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr minmax(700px, 4fr);
+  display: grid;
 }
 
 .header {
@@ -161,14 +181,6 @@ main {
   grid-row: 1/4;
 }
 
-.projects {
+.content {
   background-color: #cbd5e1;
-  grid-column: 2/4;
-  grid-row: 2/-1;
-}
-
-.news {
-  background-color: #cbd5e1;
-  grid-column: 3/4;
-  grid-row: 2/-1;
 }/*# sourceMappingURL=main.css.map */
