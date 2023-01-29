@@ -1,8 +1,6 @@
 .content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-
-    //overflow: scroll;
 }
 .projects {
     display: grid;
@@ -13,8 +11,80 @@
     .project {
         background-color: $light;
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-left: $dark 10px solid;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        &:hover {
+            transition: 1s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
         img {
-            overflow: hidden;
+            border-radius: 10px;
+        }
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 1rem;
+            padding: 5px;
+            a {
+                img {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+                &:hover {
+                    img {
+                        @include blueFilter;
+                    }
+                }
+            }
         }
     }
+}
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+    .announce {
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: $light;
+        padding: 5px;
+        border-radius: 5px;
+        &-first {
+            padding: 10px;
+        }
+
+        &-second {
+            padding: 10px;
+            h3 {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.trending {
+    @extend .announce;
+    .child {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        img {
+            border-radius: 50%;
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+}
+.divider {
+    background-color: $dark;
+    height: 1px;
+    width: 100%;
 }

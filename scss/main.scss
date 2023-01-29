@@ -11,9 +11,8 @@
 
 main {
     display: grid;
-    grid-template-columns: 1fr minmax(700px, 4fr);
+    grid-template-columns: 0.7fr minmax(700px, 4fr);
     display: grid;
-    //grid-template: max-content 100vh / max-content minmax(700px, 1fr);
 }
 .header {
     background-color: $light;

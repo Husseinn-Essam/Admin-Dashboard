@@ -96,7 +96,7 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
   color: #f8fafc;
   padding: 10px;
 }
@@ -119,6 +119,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.sidebar .divider {
+  height: 1px;
+  width: 100%;
+  background-color: #f8fafc;
 }
 
 .option {
@@ -151,9 +156,74 @@
 .projects .project {
   background-color: #f8fafc;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-left: #334155 10px solid;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.projects .project:hover {
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .projects .project img {
-  overflow: hidden;
+  border-radius: 10px;
+}
+.projects .project .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 5px;
+}
+.projects .project .actions a img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.projects .project .actions a:hover img {
+  filter: invert(59%) sepia(90%) saturate(7465%) hue-rotate(183deg) brightness(101%) contrast(105%);
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
+}
+.news .announce, .news .trending {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #f8fafc;
+  padding: 5px;
+  border-radius: 5px;
+}
+.news .announce-first {
+  padding: 10px;
+}
+.news .announce-second {
+  padding: 10px;
+}
+.news .announce-second h3 {
+  margin: 0 auto;
+}
+
+.trending .child {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+.trending .child img {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.divider {
+  background-color: #334155;
+  height: 1px;
+  width: 100%;
 }
 
 * {
@@ -165,7 +235,7 @@
 
 main {
   display: grid;
-  grid-template-columns: 1fr minmax(700px, 4fr);
+  grid-template-columns: 0.7fr minmax(700px, 4fr);
   display: grid;
 }
 
